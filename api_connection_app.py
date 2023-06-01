@@ -25,10 +25,10 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 NEOS_COLLECTION_NAME = os.getenv("NEOS_COLLECTION_NAME")
-RAW_NEOS_COLLECTION_NAME = os.getenv("RAW_NEOS_COLLECTION_NAME")
+FULL_NEOS_COLLECTION_NAME = os.getenv("FULL_NEOS_COLLECTION_NAME")
 API_URL = os.getenv("API_URL")
 API_TOKEN = os.getenv("API_TOKEN")
-INSERT_RAW = True
+INSERT_FULL_NEOS = True
 
 
 def validate_json(jsonData, check_against_schema):
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     validate_json(data, sample_schema)
     data = process_neos(data)
 
-    if INSERT_RAW:
+    if INSERT_FULL_NEOS:
         client = connect_to_mongo()
-        insert_into_mongo(data, client, RAW_NEOS_COLLECTION_NAME)
+        insert_into_mongo(data, client, FULL_NEOS_COLLECTION_NAME)
         close_mongo_connection(client)

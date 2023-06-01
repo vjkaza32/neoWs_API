@@ -1,4 +1,4 @@
-Repository for Neos API coding challenge
+# Repository for Neos API coding challenge
 
 ## Table of Contents
 
@@ -24,9 +24,7 @@ Our data has been successfully stored in mongodb. We chose this platform because
 ![Architecture of API Challenge](https://github.com/vjkaza32/neoWs_API/blob/main/api_archirecture_diagram.drawio.png?raw=true)
 
 ## Testing
-See [Run Locally](#run-locally)
-
-TODO: Implement more tests in tests folder
+See [Run Locally](#run-locally) first
 
 Install missing test requirements by running:
 ```sh
@@ -37,6 +35,7 @@ Then run
 pytest --junitxml=pytest-report.xml -s tests
 ```
 and see if all the tests pass.
+TODO: Implement more tests in tests folder
 
 ## Run Locally
 First, fill the .env file with your values for the environment variables
@@ -48,12 +47,13 @@ pip install -r requirements.txt
 
 Then we will run our app by first either [creating a virtual environment](https://code.visualstudio.com/docs/python/environments#_creating-environments) and running the application in there:
 ```sh
-(venv) device_username /path_to_repo/neoWs_API/api_connection.py
+(venv) /path_to_repo/neoWs_API/api_connection.py
 ```
 OR by running our local install of python with the application
 ```sh
 /opt/homebrew/bin/python3.10 /path_to_repo/neoWs_API/api_connection.py
 ```
+This should send data into the mongodb collection specified. Please check to see whether there is data in the two collections specified.
 
 ## TO-DO
 - Implement more tests in test_app.py and any other unit tests
