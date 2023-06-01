@@ -1,0 +1,6 @@
+{
+    "id": "string",
+    "schema": "string",
+    "title": "Person",
+    "type": "object"
+}

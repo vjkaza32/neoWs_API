@@ -1,0 +1,4 @@
+#list any requirements needed for testing here
+pytest-xprocess
+pytest
+requests
