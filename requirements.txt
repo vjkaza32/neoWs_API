@@ -1,0 +1,6 @@
+requests==2.31.0
+pymongo==4.3.3
+jsonschema==4.17.3
+python-dotenv==1.0.0
+tenacity==8.2.2
+urllib3==2.0.2
